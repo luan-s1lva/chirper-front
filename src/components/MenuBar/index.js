@@ -5,8 +5,9 @@ const MenuBar = ({ data }) => {
     <div>
       <nav>
         <a href="/">INÍCIO</a>
-        {data.map((item) => (
-          <a href={item.url}>{item.name}</a>
+        {data.map((item, index) => (
+          <a key={index} href={item.value}>{item.key}</a>
+          // alert(JSON.stringify(item))
         ))}
       </nav>
     </div>
